@@ -9,14 +9,14 @@ function Greeting() {
   React.useEffect(() => {
     if (status === 'failed') return;
     dispatch(getRandomGreeting());
-  }, [dispatch]);
+  }, [dispatch, status]);
 
   if (!greeting) {
     return (
       <div>
         <div>loading...</div>
       </div>
-    )
+    );
   }
   return (
     <div>

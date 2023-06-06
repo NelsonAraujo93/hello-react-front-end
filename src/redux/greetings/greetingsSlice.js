@@ -25,7 +25,7 @@ const initialState = {
 const greetingsSlice = createSlice({
   name: 'greetings',
   initialState,
-  reducers:{},
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getRandomGreeting.pending, (state) => ({ ...state, status: 'loading' }))
@@ -38,7 +38,7 @@ const greetingsSlice = createSlice({
         ...state,
         error: error.message,
         status: 'failed',
-      }))
+      }));
   },
 });
 
